@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+    background-color: #222;
+}
+h1 ,h2 , h3 , span  , button{
+    color: #fff;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 20px;
+}
+button {
+  padding: 12px 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px #00ffcc;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #00ffcc;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffcc, 0 0 25px #00ffcc;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px #00ffcc inset;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+
+
+.header .notice span {
+    color: #fff;}
+.header_text h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+   font-size: 32px;
+}
+.secret_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+.secret_number .secret {
+    width: 100px;
+    height: 80px;
+    background-color: #fff;
+    border: 3px solid #fff ;
+     z-index: 1
+}
+.secret_number .secret h2 {
+    text-align: center;
+    color: #000;
+    line-height: 2;
+    font-size: 38px;   
+}
+.secret_number .secret::before,
+.secret_number .secret::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; 
+    height: 5px; 
+    background-color: #fff;
+    z-index: -1;
+}
+
+.secret_number .secret::before {
+    left:  -100px;
+}
+
+.secret_number .secret::after {
+    right: -100px;
+   
+}
+.sec_2 {
+    text-align: center;
+}
+.sec_2 .c1 .Guess {
+   width: 150px;
+  height: 80px;
+  font-size: 40px;
+  text-align: center;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  outline: none;
+  box-shadow: 0 0 15px #00ffcc;
+  transition: 0.3s ease;
+}
+.Guess:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+}
+.sec_2 .c1 button {
+
+    margin-top: 20px;
+}
+.sec_2 .c2  h3 ,h2 {
+    padding-bottom: 18px; 
+}
+
+@media screen and (max-width: 768px) {
+
+    .header_text h1 {
+        font-size: 18px;
+    }
+    .header .notice {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .header .notice span {
+        font-size: 10px;
+    }
+    .sec_2 .c2 {
+        margin-top: 30px;
+    }
+    .sec_2 .c2 h3 {
+        font-size: 16px;
+    }
+    .btn button {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+   
+}
